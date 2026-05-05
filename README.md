@@ -16,17 +16,18 @@ modern LQR with state estimation.
 ---
 
 ## Project Structure
+```
 servo-motor-control-matlab/
-├── src/
-│   ├── phase1_plant_model.m          # Plant modelling
-│   ├── phase2a_manual_pid.m          # Manual PID tuning
-│   ├── phase2b_pidtune.m             # Automatic PID tuning
-│   ├── phase3a_lqr.m                 # LQR state feedback
-│   ├── phase3b_observer.m            # Luenberger observer
-│   ├── phase3c_lqr_observer_combined.m  # Combined system
-│   └── motor_open_loop.slx           # Simulink model
-└── results/                          # All output plots
-
+|-- src/
+|   |-- phase1_plant_model.m
+|   |-- phase2a_manual_pid.m
+|   |-- phase2b_pidtune.m
+|   |-- phase3a_lqr.m
+|   |-- phase3b_observer.m
+|   |-- phase3c_lqr_observer_combined.m
+|   └-- motor_open_loop.slx
+└-- results/
+```
 ---
 
 ## Phase 1 — Plant Modelling
