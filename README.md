@@ -58,7 +58,10 @@ C = \begin{bmatrix} 1 & 0 \end{bmatrix}$$
 | Overshoot | 0% |
 | Stability | Stable (poles: -9.99, -2.00) |
 
-![Open-Loop Step Response](results/phase1_step_response.png)
+![Open-Loop Step Response](results/Step%20Response.png)
+![Simulink Model](results/Phase1_Simulink.jpeg)
+![Pole-Zero Map](results/Pole-Zero%20Map.png)
+![Bode Plot](results/Bode%20Plot.png)
 
 ---
 
@@ -85,7 +88,9 @@ compared against manual tune.
 Manual tuning achieved lower overshoot than all three 
 auto-tuned variants while maintaining comparable rise time.
 
-![PID Comparison](results/phase2b_pidtune_comparison.png)
+![Manual PID Step Response](results/Manual%20PID%20Step%20Response.png)
+![Open vs Closed Loop](results/Open%20vs%20Closed%20Loop.png)
+![pidtune Comparison](results/pidtune%20Comparison.png)
 
 ---
 
@@ -105,7 +110,7 @@ impossible for PID at comparable rise times.
 | LQR Aggressive | 0.0727 | 0.1260 | 0.00% |
 | PID Manual | 0.1209 | 0.4194 | 6.09% |
 
-![LQR vs PID](results/phase3a_lqr_vs_pid.png)
+![LQR vs PID](results/LQR%20vs%20PID%20Comparison.png)
 
 ### 3B — Luenberger Observer
 Armature current cannot be directly measured on a real 
@@ -125,7 +130,7 @@ Medium observer converges 4x faster than controller
 settling time — accurate estimates available throughout 
 the transient.
 
-![Observer Convergence](results/phase3b_observer_convergence.png)
+![Observer Estimation Error](results/Observer%20Estimation%20Error.png)
 
 ### 3C — Combined LQR + Observer
 Connected observer to LQR controller. Separation principle 
@@ -143,8 +148,8 @@ plus observer poles exactly.
 Using estimated states instead of real states resulted in 
 **zero performance loss** — separation principle confirmed.
 
-![Combined System](results/phase3c_combined_step_response.png)
-![Disturbance Rejection](results/phase3c_disturbance_rejection.png)
+![LQR+Observer vs Ideal vs PID](results/LQR%2BObserver%20vs%20Ideal%20vs%20PID.png)
+![Disturbance Rejection](results/Disturbance%20Rejection.png)
 
 ---
 
